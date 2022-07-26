@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:telnet"
         mc:Ignorable="d"
-        Title="Настройка порта" Height="300" Width="300">
+        Title="Настройка порта" Height="300" Width="310">
     <Grid Background="LightCyan">
-        <Grid ShowGridLines="False" HorizontalAlignment="Left" Width="282" Height="201" VerticalAlignment="Top" Margin="0,10,10,0">
+        <Grid ShowGridLines="False" HorizontalAlignment="Left" Width="282" Height="201" VerticalAlignment="Top" Margin="7">
             <Grid.RowDefinitions>
-                <RowDefinition  Height="0.2*"></RowDefinition>
+                <RowDefinition Height="0.2*"></RowDefinition>
                 <RowDefinition Height="0.2*" ></RowDefinition>
                 <RowDefinition Height="0.2*" ></RowDefinition>
                 <RowDefinition Height="0.2*" ></RowDefinition>
@@ -24,9 +24,9 @@
             <Label Grid.Column="0" Grid.Row="2" Margin="5" Content="Число битов данных:"/>
             <Label Grid.Column="0" Grid.Row="3" Margin="5" Content="Контроль:"/>
             <Label Grid.Column="0" Grid.Row="4" Margin="5" Content="Число стоп битов:"/>
-            <ComboBox x:Name="CB_Port" Margin="6" Grid.Column="1" Grid.Row="0"  >
+            <ComboBox x:Name="CB_Port" Margin="6" Grid.Column="1" Grid.Row="0" SelectionChanged="CB_Port_SelectionChanged" >
             </ComboBox>
-            <ComboBox x:Name="CB_Speed" Margin="6" Grid.Column="1" Grid.Row="1"  >
+            <ComboBox x:Name="CB_Speed" Margin="6" Grid.Column="1" Grid.Row="1" SelectionChanged="CB_Speed_SelectionChanged">
                 <ComboBoxItem>1200</ComboBoxItem>
                 <ComboBoxItem>2400</ComboBoxItem>
                 <ComboBoxItem>4800</ComboBoxItem>
@@ -36,25 +36,24 @@
                 <ComboBoxItem>57600</ComboBoxItem>
                 <ComboBoxItem>115200</ComboBoxItem>
             </ComboBox>
-            <ComboBox x:Name="CB_CountBit" Margin="6" Grid.Column="1" Grid.Row="2"  >
+            <ComboBox x:Name="CB_CountBit" Margin="6" Grid.Column="1" Grid.Row="2"  SelectionChanged="CB_CountBit_SelectionChanged"  >
                 <ComboBoxItem>5</ComboBoxItem>
                 <ComboBoxItem Margin="3">6</ComboBoxItem>
                 <ComboBoxItem Margin="4">7</ComboBoxItem>
                 <ComboBoxItem Margin="5">8</ComboBoxItem>
                 <ComboBoxItem Margin="6">9</ComboBoxItem>
             </ComboBox>
-            <ComboBox x:Name="CB_Control" Margin="6" Grid.Column="1" Grid.Row="3">
+            <ComboBox x:Name="CB_Control" Margin="6" Grid.Column="1" Grid.Row="3" SelectionChanged="CB_Control_SelectionChanged">
                 <ComboBoxItem>Нет</ComboBoxItem>
                 <ComboBoxItem>Четность</ComboBoxItem>
                 <ComboBoxItem>Нечетность</ComboBoxItem>
             </ComboBox>
-
-            <ComboBox x:Name="CB_CountStopBit" Margin="5" Grid.Column="1" Grid.Row="4">
+            <ComboBox x:Name="CB_CountStopBit" Margin="5" Grid.Column="1" Grid.Row="4" SelectionChanged="CB_CountStopBit_SelectionChanged">
                 <ComboBoxItem>1</ComboBoxItem>
                 <ComboBoxItem>1.5</ComboBoxItem>
                 <ComboBoxItem>2</ComboBoxItem>
             </ComboBox>
         </Grid>
-        <Button x:Name="Bt_Save" Margin="96,228,90,10" Content="Сохранение" RenderTransformOrigin="0.333,-1.913" ></Button>
+        <Button x:Name="Bt_Save" Margin="96,228,90,10" Content="Сохранение" RenderTransformOrigin="0.333,-1.913" Click="Bt_Save_Click" ></Button>
     </Grid>
 </Window>

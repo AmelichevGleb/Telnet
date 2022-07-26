@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<State>
+  <State>
+    <Speed>9600</Speed>
+    <CountBit>6</CountBit>
+    <Control>Четность</Control>
+    <CountStopBit>1</CountStopBit>
+  </State>
+</State>
